@@ -12,7 +12,7 @@ const Navbar = () => {
             <div className="flex items-center justify-between h-16">
                 <div className=" flex items-center">
                     <div className="md:block">
-                        <div className="ml-10 flex items-baseline space-x-4">
+                        <div className="flex items-baseline space-x-4">
                             <Link className="text-gray-400  hover:text-gray-800 dark:hover:text-white px-3 py-2 rounded-md text-sm font-medium" to={"/"}>
                                     Home
                             </Link>
