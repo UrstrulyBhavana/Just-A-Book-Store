@@ -4,7 +4,7 @@ import { products } from "../../utils/products-data";
 const ProductsPreview = () => {
 
     return (
-        <div className="mt-20 mx-20 flex flex-wrap justify-around">
+        <div className="mt-20 mx-auto max-w-7xl flex flex-wrap justify-around">
             { products.map( (product) => {
                 return (
                     <ProductCard key={product.id} product={product} /> 
