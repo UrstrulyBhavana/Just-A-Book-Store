@@ -5,11 +5,12 @@ const ProductCard = ({ product }) => {
 
     return (
         <div key={title} className="w-60 m-10 group relative">
-              <div className="aspect-w-1 aspect-h-1 overflow-hidden rounded-lg bg-gray-200 group-hover:opacity-75 lg:aspect-none ">
+              <div className="overflow-hidden rounded-lg bg-gray-200 group-hover:opacity-75 lg:aspect-none ">
                 <img
+                    height={'250px'}
+                    width={'250px'}
                     src={cover}
                     alt={title}
-                    className="h-full w-full object-cover object-center lg:h-full lg:w-full"
                 />
               </div>
               

@@ -1,9 +1,29 @@
 import { Link } from "react-router-dom";
-
+import { useDispatch } from "react-redux";
 import { productsData } from "../../utils/products-data";
+import { store } from "../../store/store";
 
-const CartItem = () => {
-    const { id, title, author, cover, price, description } = productsData[0];
+import { addItemToCart, removeItemFromCart, clearItemFromCart } from "../../store/cart/cart.action";
+
+
+const CartItem = ({ cartItem }) => {
+    const { id, title, author, cover, price, description, quantity } = cartItem;
+
+    const dispatch = useDispatch();
+    const handleAddItemToCart = () => {
+        const state = store.getState();
+        dispatch(addItemToCart(state.cartItems, cartItem));
+    }
+
+    const handleRemoveItemFromCart = () => {
+        const state = store.getState();
+        dispatch(removeItemFromCart(state.cartItems, cartItem));
+    }
+    
+    const handleClearItemFromCart = () => {
+        const state = store.getState();
+        dispatch(clearItemFromCart(state.cartItems, cartItem));
+    }
 
     return (
         <div className="flex my-10  max-w-7xl mx-auto h-60 overflow-hidden">
@@ -22,8 +42,8 @@ const CartItem = () => {
             
             <div className="w-1/6 ml-5 mr-10">
 
-                <div className="text-gray-800 pb-2 text-right font-medium hover:font-black cursor-pointer" >
-                    X
+                <div>
+                    <span onClick={ handleClearItemFromCart } className="text-gray-800 float-right pb-2 text-right font-medium hover:font-black cursor-pointer">X</span>
                 </div>
 
                 <div className="w-full flex justify-between">
@@ -34,9 +54,9 @@ const CartItem = () => {
                 <div className="w-full flex justify-between">
                     <span >Quantity:</span>
                     <div>
-                        <button className="mr-3 text-gray-800 font-medium hover:font-black">-</button>
-                        <span>2</span>
-                        <button className="ml-3 text-gray-800font-medium hover:font-black">+</button> 
+                        <button onClick={ handleRemoveItemFromCart } className="mr-3 text-gray-800 font-medium hover:font-black">-</button>
+                        <span>{quantity}</span>
+                        <button onClick={ handleAddItemToCart } className="ml-3 text-gray-800font-medium hover:font-black">+</button> 
                     </div>
                 </div>
                     
