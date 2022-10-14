@@ -1,9 +1,12 @@
+import CartItem from "../../components/cart-item/cart-item.component";
+
 const Cart = () => {
     
     return (
-        <h1>
-            this is cart
-        </h1>
+        <div>
+            <CartItem />
+            <CartItem />
+        </div>
     );
 }
 
