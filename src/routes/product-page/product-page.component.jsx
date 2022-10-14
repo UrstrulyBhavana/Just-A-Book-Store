@@ -1,9 +1,9 @@
 import { useParams } from "react-router-dom";
-import { products } from "../../utils/products-data";
+import { productsData } from "../../utils/products-data";
 
 const Product = () => {
     const { productId } = useParams();
-    const product = products.find(prod => prod.id.toString() === productId);
+    const product = productsData.find(prod => prod.id.toString() === productId);
 
     const { id, title, author, cover, price, description } = product;
 

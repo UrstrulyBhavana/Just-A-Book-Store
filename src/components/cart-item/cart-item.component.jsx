@@ -1,9 +1,9 @@
 import { Link } from "react-router-dom";
 
-import { products } from "../../utils/products-data";
+import { productsData } from "../../utils/products-data";
 
 const CartItem = () => {
-    const { id, title, author, cover, price, description } = products[0];
+    const { id, title, author, cover, price, description } = productsData[0];
 
     return (
         <div className="flex my-10  max-w-7xl mx-auto h-60 overflow-hidden">
