@@ -28,9 +28,9 @@ const Product = () => {
                     <div className="w-full flex justify-between">
                         <span >Quantity:</span>
                         <div>
-                            <button className="mr-3">-</button>
+                            <button className="mr-3 text-gray-800 font-medium hover:font-black">-</button>
                             <span>5</span>
-                            <button className="ml-3">+</button> 
+                            <button className="ml-3 text-gray-800 font-medium hover:font-black">+</button> 
                         </div>
                     </div>
                     
