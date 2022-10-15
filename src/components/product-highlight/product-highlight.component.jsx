@@ -9,7 +9,7 @@ const ProductHighlight = () => {
     const { id, title, author, cover, description } = product;
 
     return (
-        <div className=" mt-10 flex max-w-7xl mx-auto overflow-hidden">
+        <div className=" mt-10 flex max-w-7xl mx-auto overflow-hidden  animate__animated animate__fadeIn">
             
             <Link className="ml-10 overflow-hidden hover:opacity-75 " to={`products/${id}`}>
                 <img className="rounded-lg h-96 w-72" src={cover} alt={title} />

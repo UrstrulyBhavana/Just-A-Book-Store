@@ -12,7 +12,7 @@ const ProductsThumbnails = () => {
     }
 
     return (
-        <div>
+        <div className="animate__animated animate__fadeIn">
             <h1 className="flex justify-between mt-10 mx-10 text-lg font-medium">Best Selling Titles</h1>
             <div className="flex justify-between my-5 mx-5">
                 {productsData.map((product) => (

@@ -47,7 +47,7 @@ const CartItem = ({ cartItem }) => {
                     <span onClick={ handleClearItemFromCart } className="text-gray-800 float-right pb-2 text-right font-medium hover:font-black cursor-pointer">X</span>
                 </div>
 
-                <div className="w-full flex justify-between">
+                <div className="w-full flex justify-between pt-6">
                     <span>Price: </span> 
                     <span >$ {price}</span>
                 </div>

@@ -14,7 +14,7 @@ const Cart = () => {
     const cartTotal = useSelector(selectCartTotal);
     
     return (
-        <div className="max-w-7xl mx-auto ">
+        <div className="max-w-7xl mx-auto animate__animated animate__fadeIn">
             {cartItems.map((cartItem) => (
                 <CartItem key={cartItem.id} cartItem={cartItem} />
             ))}

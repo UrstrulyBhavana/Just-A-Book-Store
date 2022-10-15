@@ -5,7 +5,7 @@ import ProductsThumbnails from "../../components/products-thumbnails/products-th
 const Home = () => {
     
     return (
-        <div className="max-w-7xl h-5/6 mx-auto flex flex-col justify-between">
+        <div className="max-w-7xl h-5/6 mx-auto flex flex-col justify-between ">
             <ProductHighlight />
 
             <ProductsThumbnails />
