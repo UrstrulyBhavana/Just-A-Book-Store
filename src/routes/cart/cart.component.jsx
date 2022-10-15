@@ -1,8 +1,8 @@
-import { useEffect } from "react";
 import { useSelector } from "react-redux";
-import CartItem from "../../components/cart-item/cart-item.component";
+
 import { selectCartItems, selectCartTotal } from "../../store/cart/cart.selector";
-import { store } from "../../store/store";
+
+import CartItem from "../../components/cart-item/cart-item.component";
 
 const numberWithCommas = (x) => {
     return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");

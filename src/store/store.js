@@ -3,7 +3,6 @@ import logger from "redux-logger";
 import storage from 'redux-persist/lib/storage';
 import { persistStore, persistReducer } from 'redux-persist';
 
-
 import { rootReducer } from "./root-reducer";
 
 const persistConfig = {

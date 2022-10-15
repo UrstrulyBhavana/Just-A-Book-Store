@@ -1,7 +1,7 @@
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
+
 import { selectHighlightedProduct } from "../../store/home/home.selector";
-import { productsData } from "../../utils/products-data";
 
 
 const ProductHighlight = () => {

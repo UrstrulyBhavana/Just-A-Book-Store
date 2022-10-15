@@ -1,5 +1,6 @@
-import ProductCard from "../../components/product-card/product-card.component";
 import { productsData } from "../../utils/products-data";
+
+import ProductCard from "../../components/product-card/product-card.component";
 
 const ProductsPreview = () => {
 

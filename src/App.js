@@ -1,5 +1,5 @@
-import { Fragment } from "react";
-import { Routes, Route, BrowserRouter } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
+
 import Navbar from "./components/navbar/navbar.component";
 import Cart from "./routes/cart/cart.component";
 import Home from "./routes/home/home.component";

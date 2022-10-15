@@ -1,6 +1,7 @@
-import { productsData } from "../../utils/products-data";
-import { setHighlightedProduct } from "../../store/home/home.action";
 import { useDispatch } from "react-redux";
+
+import { setHighlightedProduct } from "../../store/home/home.action";
+import { productsData } from "../../utils/products-data";
 
 const ProductsThumbnails = () => {
     const dispatch = useDispatch();

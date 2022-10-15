@@ -1,7 +1,5 @@
 import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-import { productsData } from "../../utils/products-data";
-import { store } from "../../store/store";
 
 import { addItemToCart, removeItemFromCart, clearItemFromCart } from "../../store/cart/cart.action";
 import { selectCartItems } from "../../store/cart/cart.selector";
