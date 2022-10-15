@@ -18,7 +18,7 @@ const Cart = () => {
             {cartItems.map((cartItem) => (
                 <CartItem key={cartItem.id} cartItem={cartItem} />
             ))}
-
+            
             <div className="float-right mr-10 font-medium">
                 Total: ${ numberWithCommas(cartTotal.toFixed(2)) }
             </div>

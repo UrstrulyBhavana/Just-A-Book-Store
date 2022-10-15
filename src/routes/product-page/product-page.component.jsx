@@ -2,7 +2,6 @@ import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
 import { addItemToCart, removeItemFromCart } from "../../store/cart/cart.action";
 import { selectCartItems } from "../../store/cart/cart.selector";
-import { store } from "../../store/store";
 import { productsData } from "../../utils/products-data";
 
 const Product = () => {
@@ -11,7 +10,7 @@ const Product = () => {
    
     const dispatch = useDispatch();
 
-    const { id, title, author, cover, price, description } = product;
+    const { title, author, cover, price, description } = product;
     
     const cartItems = useSelector(selectCartItems);
     const cartItem = cartItems.find(cartItem => cartItem.id.toString() === productId);
@@ -26,7 +25,7 @@ const Product = () => {
     }
 
     return (
-        <div className="mt-10 flex justify-between max-w-7xl mx-auto">
+        <div className="mt-10 flex justify-between max-w-7xl mx-auto animate__animated animate__fadeIn">
             <div className=" w-4/6 mx-10 overflow-hidden">
                 <h1 className="text-gray-400 pb-2 text-md font-medium"><span className="text-gray-800">Title:</span> {title}</h1>
                 <h2 className="text-gray-400 pb-2 text-md font-medium"><span className="text-gray-800">Author(s):</span> {author}</h2>

@@ -19,7 +19,7 @@ const ProductHighlight = () => {
                 <div>
                     <h1 className="text-gray-400 pb-2 text-md font-medium"><span className="text-gray-800">Title:</span> {title}</h1>
                     <h2 className="text-gray-400 pb-2 text-md font-medium"><span className="text-gray-800">Author(s):</span> {author}</h2>
-                    <h3 className="text-gray-400 pb-2 text-md font-medium"><span className="text-gray-800">Description:</span> {description.substring(0, 600)}...</h3>
+                    <h3 className="text-gray-400 pb-2 text-md font-medium"><span className="text-gray-800">Description:</span> {description.substring(0, 700)}...</h3>
                 </div>
 
                 <Link to={`products/${id}`} className="mt-10 w-28 flex items-center justify-center rounded-md border border-transparent bg-gray-200 py-2 px-2 text-base font-medium hover:bg-black hover:text-white ">
