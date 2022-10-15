@@ -1,28 +1,28 @@
 import { Link } from "react-router-dom";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { productsData } from "../../utils/products-data";
 import { store } from "../../store/store";
 
 import { addItemToCart, removeItemFromCart, clearItemFromCart } from "../../store/cart/cart.action";
+import { selectCartItems } from "../../store/cart/cart.selector";
 
 
 const CartItem = ({ cartItem }) => {
     const { id, title, author, cover, price, description, quantity } = cartItem;
 
     const dispatch = useDispatch();
-    const handleAddItemToCart = () => {
-        const state = store.getState();
-        dispatch(addItemToCart(state.cartItems, cartItem));
+    const cartItems = useSelector(selectCartItems);
+
+    const handleAddItemToCart = () => { 
+        dispatch(addItemToCart(cartItems, cartItem));
     }
 
-    const handleRemoveItemFromCart = () => {
-        const state = store.getState();
-        dispatch(removeItemFromCart(state.cartItems, cartItem));
+    const handleRemoveItemFromCart = () => {  
+        dispatch(removeItemFromCart(cartItems, cartItem));
     }
     
-    const handleClearItemFromCart = () => {
-        const state = store.getState();
-        dispatch(clearItemFromCart(state.cartItems, cartItem));
+    const handleClearItemFromCart = () => {   
+        dispatch(clearItemFromCart(cartItems, cartItem));
     }
 
     return (

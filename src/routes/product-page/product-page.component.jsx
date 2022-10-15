@@ -1,6 +1,7 @@
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
 import { addItemToCart, removeItemFromCart } from "../../store/cart/cart.action";
+import { selectCartItems } from "../../store/cart/cart.selector";
 import { store } from "../../store/store";
 import { productsData } from "../../utils/products-data";
 
@@ -10,18 +11,18 @@ const Product = () => {
    
     const dispatch = useDispatch();
 
-    const { id, title, author, cover, price, description, quantity } = product;
+    const { id, title, author, cover, price, description } = product;
     
-    const state = store.getState();
+    const cartItems = useSelector(selectCartItems);
+    const cartItem = cartItems.find(cartItem => cartItem.id.toString() === productId);
+    const quantity = cartItem ? cartItem.quantity : 0;
 
     const handleAddItemToCart = () => {
-        const state = store.getState();
-        dispatch(addItemToCart(state.cartItems, product));
+        dispatch(addItemToCart(cartItems, product));
     }
 
     const handleRemoveItemFromCart = () => {
-        const state = store.getState();
-        dispatch(removeItemFromCart(state.cartItems, product));
+        dispatch(removeItemFromCart(cartItems, product));
     }
 
     return (
@@ -46,7 +47,7 @@ const Product = () => {
                         <span >Quantity:</span>
                         <div>
                             <button onClick={ handleRemoveItemFromCart } className="mr-3 text-gray-800 font-medium hover:font-black">-</button>
-                            <span>{quantity ? quantity : 0}</span>
+                            <span>{quantity}</span>
                             <button onClick={ handleAddItemToCart } className="ml-3 text-gray-800 font-medium hover:font-black">+</button> 
                         </div>
                     </div>

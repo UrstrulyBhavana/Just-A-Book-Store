@@ -1,17 +1,23 @@
 import { useEffect } from "react";
+import { useSelector } from "react-redux";
 import CartItem from "../../components/cart-item/cart-item.component";
+import { selectCartItems, selectCartTotal } from "../../store/cart/cart.selector";
 import { store } from "../../store/store";
 
 
 const Cart = () => {
-    let state = store.getState();
-    let cartItems = state.cartItems;
-  
+    const cartItems = useSelector(selectCartItems);
+    const cartTotal = useSelector(selectCartTotal);
+    
     return (
         <div>
             {cartItems.map((cartItem) => (
                 <CartItem key={cartItem.id} cartItem={cartItem} />
             ))}
+
+            <div>
+                Total: ${cartTotal}
+            </div>
         </div>
     );
 }
