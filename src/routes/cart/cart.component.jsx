@@ -19,9 +19,11 @@ const Cart = () => {
                 <CartItem key={cartItem.id} cartItem={cartItem} />
             ))}
             
-            <div className="float-right mr-10 font-medium">
+            {cartItems.length === 0 ? (<h1 className="text-center mt-10 font-medium" >Oops! Your Cart is Empty!</h1>) : <div className="float-right mr-10 font-medium">
                 Total: ${ numberWithCommas(cartTotal.toFixed(2)) }
-            </div>
+            </div>}
+
+            
         </div>
     );
 }
