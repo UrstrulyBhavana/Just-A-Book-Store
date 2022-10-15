@@ -26,7 +26,7 @@ const CartItem = ({ cartItem }) => {
     }
 
     return (
-        <div className="flex my-10  max-w-7xl mx-auto h-60 overflow-hidden">
+        <div className="flex my-10 h-60 overflow-hidden">
             
             <div className="mr-5 ml-10">
                 <Link to={`/products/${id}`}>
@@ -36,7 +36,8 @@ const CartItem = ({ cartItem }) => {
             </div>
             
             <div className="w-4/6 mx-5 ">
-                <h1 className="text-gray-800 pb-2 text-md font-medium">{title}</h1>
+                <h1 className="text-gray-800 text-md font-medium">{title}</h1>
+                <h2 className="text-gray-400 pb-2 text-md font-medium">{author}</h2>
                 <p>{description.substring(0, 400)}...</p>
             </div>
             
