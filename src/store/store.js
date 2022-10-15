@@ -3,15 +3,16 @@ import logger from "redux-logger";
 import storage from 'redux-persist/lib/storage';
 import { persistStore, persistReducer } from 'redux-persist';
 
-import { cartReducer } from "./cart/cart.reducer";
 
+import { rootReducer } from "./root-reducer";
 
 const persistConfig = {
     key: 'root',
     storage,
+    blacklist: ['home']
   };
 
-const persistedReducer = persistReducer(persistConfig, cartReducer);
+const persistedReducer = persistReducer(persistConfig, rootReducer);
 
 const middleWares = [process.env.NODE_ENV === 'development' && logger].filter(
     Boolean

@@ -33,7 +33,7 @@ const Product = () => {
                 <h3 className="text-gray-400 text-md font-medium"><span className="text-gray-800">Description:</span> {description}</h3>
             </div>
             <div className="w-72 mx-10">
-                <div className="overflow-hidden">
+                <div className="overflow-hidden ">
                     <img className="h-full w-full object-cover object-center lg:h-full lg:w-full rounded-lg" src={cover} alt={title} />
                 </div>
                 
@@ -57,7 +57,7 @@ const Product = () => {
                 <div>
                     <button
                         type="submit"
-                        className="mt-10 flex w-full items-center justify-center rounded-md border border-transparent bg-black py-3 px-8 text-base font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
+                        className="mt-10 flex w-full items-center justify-center rounded-md border border-transparent bg-gray-200 py-2 px-2 text-base font-medium hover:bg-black hover:text-white "
                         onClick={ handleAddItemToCart }
                     >
                         Add to Cart

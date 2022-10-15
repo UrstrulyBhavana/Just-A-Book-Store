@@ -1,6 +1,6 @@
 import { createSelector } from "@reduxjs/toolkit";
 
-const selectCartReducer = (state) => state;
+const selectCartReducer = (state) => state.cart;
 
 export const selectCartItems = createSelector(
   [selectCartReducer],
